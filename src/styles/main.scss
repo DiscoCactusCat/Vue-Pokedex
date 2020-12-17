@@ -1,0 +1,66 @@
+@import 'colors';
+@import 'mixins';
+@import 'fonts';
+@import 'pokedex';
+
+
+#app{
+    margin: 0;
+}
+
+body{
+    background: url('../assets/images/background.jpg') no-repeat ;
+    background-size: cover;
+}
+
+#pokedex{
+    transform: scale(1.5);
+}
+header, footer{
+    position: relative;
+    z-index: 10;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $dark;
+    color: #fff;
+}
+
+#pokedex-left-part, #pokedex-right-part{
+    background-color: #c10c0c;
+    height: 70vh;
+}
+
+#info-screen{
+    font-family: 'Press Start 2P', cursive;
+
+    span.name{
+        text-transform: capitalize;
+    }
+}
+
+#screen{
+    img{
+        transform: scale(1.4);
+        transition: all ease .4s;
+        
+        
+    }
+}
+
+button{
+    @include slideButton(#111,#fff);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    &:hover{
+        color: inherit;
+        text-decoration: inherit;
+    }
+    
+}
