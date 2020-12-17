@@ -19,7 +19,7 @@ Navigate in the different pages with the 4 round buttons on left side.
 In pokemon list, you can navigate using the cross. You also can enter an ID and validate with the long green button, on right side.
 
 
-_For a demo, please visit [my website](http://projects.caroline-roy.com/vue/)_
+_For a demo, please visit [my website](http://pokedex.caroline-roy.com/)_
 
 
 
