@@ -69,4 +69,4 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" src="./pokemonlist.scss" scoped></style>
