@@ -36,4 +36,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss" scr="./cross.scss"></style>
+<style scoped lang="scss" ></style>

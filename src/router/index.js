@@ -5,34 +5,36 @@ import Contact from '../views/Contact.vue';
 import Shop from '../views/Shop.vue';
 import Error404 from '../views/Error404.vue';
 
+// var domain = "/caroline/pokedex/";
+var domain = "/";
 const router = createRouter({
     history: createWebHistory(),
     routes:[
         {
-            path: "/",
+            path: domain,
             name: "Home",
             component: Home
         },
         {
-            path: "/pokemon",
+            path: domain+"pokemon",
             name: "Pokemon List",
             component: PokemonList,
             alias: "/pokemons"
         },
 
         {
-            path: "/contact",
+            path: domain+"contact",
             name: "Contact",
             component: Contact
         },
         {
-            path: "/shop",
+            path: domain+"shop",
             name: "Shop",
             component: Shop
         },
         
         {
-            path: "/:catchAll(.*)",
+            path: domain+":catchAll(.*)",
             name: "404",
             component: Error404
         }

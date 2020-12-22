@@ -1,0 +1,53 @@
+#shop-list li{
+    height: 15px;
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    &.sold{
+        
+        cursor: not-allowed;
+    }
+
+    span{
+        &:nth-child(2){
+            text-align: left;
+            display: inline-block;
+            width: 150px;
+           
+        }
+        &:nth-child(3){
+            text-align: right;
+            display: inline-block;
+            width: 50px;
+           
+        }
+        
+    }
+
+    img{
+        height: 100%;
+    }
+
+    &:hover{
+        background: #BBB;
+    }
+}
+@keyframes itemOut{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(300px);
+        opacity:0;
+        
+    }
+}
+
+.item-leave-active{
+    animation: itemOut 1s  ;
+}
+
+

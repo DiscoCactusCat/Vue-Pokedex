@@ -1,5 +1,4 @@
 <template>
- 
   <img :src="sprite" alt="" />
 </template>
 <script>
@@ -26,14 +25,14 @@ export default {
         .get("https://pokeapi.co/api/v2/pokemon/" + this.pokemonId)
         .then((resp) => {
           this.name = resp.data.name;
-          var sprite= this.getSpriteKey(this.pokemonSprite);
-         
-           this.sprite = resp.data.sprites[sprite];
-            this.emitInfo();
-        });
-       
+          var sprite = this.getSpriteKey(this.pokemonSprite);
 
-     
+          this.sprite = resp.data.sprites[sprite];
+          this.emitInfo();
+        })
+        .catch((error) => {
+          console.log("Error retrieving pokemon data from API \n" + error);
+        });
     },
     getSpriteKey(spriteId) {
       switch (spriteId) {
@@ -47,24 +46,19 @@ export default {
           return "back_shiny";
       }
     },
-    emitInfo(){
-        this.$emit("pokemonInfo", this.name);
-    }
+    emitInfo() {
+      this.$emit("pokemonInfo", this.name);
+    },
   },
   mounted() {
-       this.getPokemonInfo();
-       
+    this.getPokemonInfo();
   },
   watch: {
     pokemonId: function() {
       this.getPokemonInfo();
-     
-       
-      
     },
     pokemonSprite: function() {
       this.getPokemonInfo();
-     
     },
   },
 };
